@@ -1,29 +1,52 @@
+/* General */
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
+  background-color: #0A1D1A; /* dark navy-green */
+  color: white;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.wrap {
-  width: 90%;
-  margin: 2em auto;
+/* Header */
+header {
+  background-color: #001F54; /* navy */
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-.subject ul {
-  list-style: none;
-  padding-left: 0;
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.subject li {
-  padding: 0.2em 0;
+/* Subjects */
+#subjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
 }
 
-/* Subtle hint for unlockable items */
-.highlightable {
-  cursor: text;
-  text-decoration: dotted underline; 
+.subject-card {
+  background-color: #00332E; /* dark navy-greenish for card */
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.highlightable:hover {
-  color: #555;
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.subject-card a {
+  color: white;
+  text-decoration: none;
+}
+
+.subject-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
