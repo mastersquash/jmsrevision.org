@@ -1,14 +1,14 @@
-/* General */
+/* General body */
 body {
-  background-color: #0A1D1A; /* dark navy-green */
-  color: white;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #0a1f14; /* dark navy-greenish */
+  color: #fff;
 }
 
 /* Header */
 header {
-  background-color: #001F54; /* navy */
+  background-color: #001f4d; /* navy blue */
   text-align: center;
   padding: 2rem 1rem;
 }
@@ -16,37 +16,36 @@ header {
 header h1 {
   font-size: 3rem;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
 }
 
-/* Subjects */
+/* Subject cards */
 #subjects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
-  justify-items: center;
 }
 
-.subject-card {
-  background-color: #00332E; /* dark navy-greenish for card */
-  border-radius: 10px;
+.card {
+  background-color: #002b33; /* slightly lighter dark green */
+  border-radius: 12px;
   padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
-.subject-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.subject-card a {
-  color: white;
-  text-decoration: none;
-}
-
-.subject-card .icon {
-  font-size: 2.5rem;
+.card h2 {
+  margin-top: 0;
   margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a0c4a0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #003844;
 }

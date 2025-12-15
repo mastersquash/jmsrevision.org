@@ -12,45 +12,24 @@
     <h1>Revision Hub</h1>
   </header>
 
-  <main>
-    <nav id="subjects">
-      <div class="subject-card">
-        <a href="subpages/maths.html">
-          <div class="icon">📐</div>
-          <h2>Maths</h2>
-          <p>Algebra, Geometry & more</p>
-        </a>
-      </div>
-      <div class="subject-card">
-        <a href="subpages/science.html">
-          <div class="icon">🔬</div>
-          <h2>Science</h2>
-          <p>Biology, Physics, Chemistry</p>
-        </a>
-      </div>
-      <div class="subject-card">
-        <a href="subpages/history.html">
-          <div class="icon">📚</div>
-          <h2>History</h2>
-          <p>World events & timelines</p>
-        </a>
-      </div>
-      <div class="subject-card">
-        <a href="subpages/coding.html">
-          <div class="icon">💻</div>
-          <h2>Coding</h2>
-          <p>Programming & algorithms</p>
-        </a>
-      </div>
-    </nav>
-
-    <section id="details">
-      <!-- Subpage content loaded here -->
-    </section>
+  <main id="subjects">
+    <div class="card" onclick="location.href='math.html'">
+      <h2>Maths</h2>
+      <p>Algebra, Geometry & more</p>
+    </div>
+    <div class="card" onclick="location.href='science.html'">
+      <h2>Science</h2>
+      <p>Biology, Physics, Chemistry</p>
+    </div>
+    <div class="card" onclick="location.href='history.html'">
+      <h2>History</h2>
+      <p>World events & timelines</p>
+    </div>
+    <div class="card" onclick="location.href='coding.html'">
+      <h2>Coding</h2>
+      <p>Programming & algorithms</p>
+    </div>
   </main>
-
-  <script src="content.js"></script>
-  <script src="extras.js"></script>
 
 </body>
 </html>
