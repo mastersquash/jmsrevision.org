@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding - Revision Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Coding & Computer Science</h1>
+</header>
+
+<main class="subpage-content">
+
+<a href="index.html" class="back-btn">← Back to Subjects</a>
+
+<!-- Programming Fundamentals -->
+<section class="topic-card">
+<h2>Programming Fundamentals</h2>
+<ul>
+  <li><strong>Variables & Data Types:</strong> int, float, string, boolean; constants; variable naming rules</li>
+  <li><strong>Operators:</strong> Arithmetic (+, -, *, /, %), comparison (==, !=, >, <, >=, <=), logical (&&, ||, !)</li>
+  <li><strong>Control Flow:</strong> if, else, elif, switch/case, ternary operator</li>
+  <li><strong>Loops:</strong> for, while, do-while; break & continue</li>
+  <li><strong>Functions:</strong> Parameters, return values, recursion, scope (local/global)</li>
+  <li><strong>Input & Output:</strong> Reading user input, printing output, string formatting</li>
+  <li><strong>Worked Example:</strong>
+    <pre>
+// Python
+for i in range(1, 6):
+    print(i * 2)
+
+// Output: 2 4 6 8 10
+    </pre>
+  </li>
+  <li><strong>Tips:</strong> Comment code, write reusable functions, meaningful variable names, small modular code</li>
+</ul>
+</section>
+
+<!-- Data Structures -->
+<section class="topic-card">
+<h2>Data Structures</h2>
+<ul>
+  <li><strong>Arrays / Lists:</strong> Indexed collections, fixed vs dynamic, insert/delete/access</li>
+  <li><strong>Stacks:</strong> LIFO, push/pop, examples: undo, browser history</li>
+  <li><strong>Queues:</strong> FIFO, enqueue/dequeue, examples: print queues, task scheduling</li>
+  <li><strong>Linked Lists:</strong> Singly & doubly linked; nodes = data + pointer; traversal</li>
+  <li><strong>Dictionaries / Hash Maps:</strong> Key-value storage, lookups, hash functions</li>
+  <li><strong>Trees:</strong> Binary trees, BST, traversal methods (preorder, inorder, postorder)</li>
+  <li><strong>Graphs:</strong> Nodes & edges, adjacency list/matrix, BFS & DFS basics</li>
+  <li><strong>Worked Example - Stack:</strong>
+    <pre>
+Stack operations:
+Push 10 → [10]
+Push 20 → [10, 20]
+Pop → 20, stack: [10]
+Pop → 10, stack: []
+    </pre>
+  </li>
+  <li><strong>Tips:</strong> Draw diagrams, visualise operations, practise common examples</li>
+</ul>
+</section>
+
+<!-- Algorithms -->
+<section class="topic-card">
+<h2>Algorithms</h2>
+<ul>
+  <li><strong>Sorting:</strong> Bubble, Selection, Insertion, Merge, Quick; step-by-step examples</li>
+  <li><strong>Searching:</strong> Linear vs Binary search (on sorted arrays)</li>
+  <li><strong>Recursion:</strong> Base case, recursive call, stack trace examples (factorial, Fibonacci)</li>
+  <li><strong>Trace Table Example - Fibonacci(n=5):</strong>
+    <pre>
+Call stack:
+fib(5) → fib(4)+fib(3)
+fib(4) → fib(3)+fib(2)
+...
+Result: 0,1,1,2,3,5
+    </pre>
+  </li>
+  <li><strong>Big O / Complexity:</strong> Time & space, best/average/worst case</li>
+  <li><strong>Tips:</strong> Trace with small input, write pseudocode first, understand logic</li>
+</ul>
+</section>
+
+<!-- Logic & Boolean -->
+<section class="topic-card">
+<h2>Logic & Boolean</h2>
+<ul>
+  <li><strong>Boolean Algebra:</strong> AND, OR, NOT, XOR; truth tables</li>
+  <li><strong>Logic Gates:</strong> AND, OR, NOT, NAND, NOR, XOR, XNOR; truth table examples</li>
+  <li><strong>Conditional Statements:</strong> Apply boolean logic in code</li>
+  <li><strong>Flowcharts & Pseudocode:</strong> Represent algorithms visually, plan logic</li>
+  <li><strong>Worked Example:</strong>
+    <pre>
+Input: a=True, b=False
+Output: a AND b → False
+a OR b → True
+NOT a → False
+    </pre>
+  </li>
+  <li><strong>Tips:</strong> Draw truth tables, simplify expressions, check all cases</li>
+</ul>
+</section>
+
+<!-- Data Representation -->
+<section class="topic-card">
+<h2>Data Representation</h2>
+<ul>
+  <li><strong>Binary Numbers:</strong> Base-2, 0 & 1, used internally by computers</li>
+  <li><strong>Decimal & Hexadecimal:</strong> Base-10 (human), Base-16 (short form for binary)</li>
+  <li><strong>Converting Bases:</strong> Binary ↔ Decimal ↔ Hexadecimal; examples included</li>
+  <li><strong>Binary Arithmetic:</strong> Addition, subtraction, overflow example
+    <pre>
+0101 + 0011 = 1000 (5+3=8)
+    </pre>
+  </li>
+  <li><strong>Two’s Complement:</strong> Represent negative numbers, example: -5 → 11111011</li>
+  <li><strong>Character Encoding:</strong> ASCII, Unicode (UTF-8), mapping characters to binary</li>
+  <li><strong>Floating Point Representation:</strong> IEEE 754, mantissa & exponent</li>
+  <li><strong>Data Size:</strong> Bits, bytes, KB, MB, GB, TB</li>
+  <li><strong>Worked Example:</strong>
+    <pre>
+// Binary to Decimal
+1011 → 1*8 + 0*4 + 1*2 + 1*1 = 11
+    </pre>
+  </li>
+  <li><strong>Tips:</strong> Memorise base conversions, practise binary arithmetic, understand data limits</li>
+</ul>
+</section>
+
+<!-- Hardware & Computer Basics -->
+<section class="topic-card">
+<h2>Hardware & Computer Basics</h2>
+<ul>
+  <li><strong>Computer Components:</strong> CPU, RAM, storage, input/output devices</li>
+  <li><strong>Memory & Storage:</strong> Primary vs secondary, cache, registers</li>
+  <li><strong>Boolean Logic in Hardware:</strong> Logic gates, circuits, digital vs analog signals</li>
+  <li><strong>Networking Basics:</strong> IP addresses, protocols, LAN/WAN, client-server</li>
+  <li><strong>Tips:</strong> Memorise key components, visualise circuits, understand data flow</li>
+</ul>
+</section>
+
+<!-- Exam & Coding Tips -->
+<section class="topic-card">
+<h2>Exam & Coding Tips</h2>
+<ul>
+  <li>Write pseudocode first</li>
+  <li>Trace code with sample input</li>
+  <li>Check edge cases (empty arrays, zero values, negative numbers)</li>
+  <li>Comment tricky sections for clarity</li>
+  <li>Time yourself on practice coding problems</li>
+  <li>Memorise common algorithms & data structures</li>
+  <li>Use consistent variable names & indentation</li>
+  <li>Plan before implementing complex logic (loops/recursion)</li>
+  <li>Draw diagrams for data structures and logic</li>
+</ul>
+</section>
+
+</main>
+</body>
+</html>
