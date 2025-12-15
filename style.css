@@ -2,13 +2,13 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #0a1f14; /* dark navy-greenish */
+  background-color: #0D3D27; /* dark navy-greenish */
   color: #fff;
 }
 
 /* Header */
 header {
-  background-color: #001f4d; /* navy blue */
+  background-color: #1E2434; /* navy blue */
   text-align: center;
   padding: 2rem 1rem;
 }
