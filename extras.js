@@ -1,14 +1,62 @@
-// Stealth resources list
-const resourcesList = [
-  { title: "Minecraft", url: "https://eaglercraftx.pages.dev" },
-  { title: "FNaF", url: "https://truffled.lol/games/fnaf/index.html" },
-  { title: "Doom", url: "https://truffled.lol/games/doom/index.html" },
-  { title: "Super Mario 64", url: "https://rec0ded88.com/wp-content/emu/html/play-n64-games.html?gameName=Super%20Mario%2064.zip&gameID=1244" },
-  { title: "Mortal Kombat Trilogy", url: "https://rec0ded88.com/wp-content/emu/html/play-playstation.html?gameName=Mortal%20Kombat%20Trilogy.chd&gameID=4121" }
-  // ...add the rest discreetly
+// -------------------- ENCRYPTED RESOURCES --------------------
+const encryptedResources = [
+  { title: "TWluZWNyYWZ0", url: "aHR0cHM6Ly9lYWdsZXJjcmFmdHgucGFnZXMuZGV2" }, // Mc
+  { title: "Rk5hRg==", url: "aHR0cHM6Ly90cnVmZmxlZC5sb2wvZ2FtZXMvZm5hZi9pbmRleC5odG1s" }, // F
+  { title: "RG9vbQ==", url: "aHR0cHM6Ly90cnVmZmxlZC5sb2wvZ2FtZXMvZG9vbS9pbmRleC5odG1s" }, // Dom
+  { title: "U3VwZXIgTWFyaW8gNjQ=", url: "aHR0cHM6Ly9yZWMwZGVkODguY29tL3dwLWNvbnRlbnQvZW11L2h0bWwvcGxheS1uNjQtZ2FtZXMuaHRtbD9nYW1lTmFtZT1TdXBlciUyME1hcmlvJTIwNjQuanBpbiZnYW1lSUQ9MTI0NA==" }, // sm
+  { title: "TW9ydGFsIEtvbWJhdCBUaHJpbGxleQ==", url: "aHR0cHM6Ly9yZWMwZGVkODguY29tL3dwLWNvbnRlbnQvZW11L2h0bWwvcGxheS1wbGF5c3RhdGlvbi5odG1sP2dhbWVOYW1lPU1vcnRhbCUyMEtvbWJhdCUyMFRocmlsbHkuY2hkJmdhbWVJRD00MTIx" } // mkt
 ];
 
-// Opens Resource Viewer tab
+// -------------------- HELPER --------------------
+function decodeBase64(str) {
+  return atob(str);
+}
+
+// -------------------- UNLOCK INPUT --------------------
+function createInputBar() {
+  const inputBar = document.createElement("input");
+  inputBar.type = "text";
+  inputBar.placeholder = "Enter game title...";
+  inputBar.id = "resourceInput";
+  inputBar.style.position = "fixed";
+  inputBar.style.bottom = "20px";
+  inputBar.style.left = "50%";
+  inputBar.style.transform = "translateX(-50%)";
+  inputBar.style.padding = "8px 12px";
+  inputBar.style.border = "1px solid #333";
+  inputBar.style.borderRadius = "4px";
+  inputBar.style.backgroundColor = "#111";
+  inputBar.style.color = "#fff";
+  inputBar.style.zIndex = "9999";
+  inputBar.style.opacity = "0.8";
+  document.body.appendChild(inputBar);
+
+  let flashTimeout;
+  let currentMatch = null;
+
+  inputBar.addEventListener("input", () => {
+    const val = inputBar.value.trim();
+    currentMatch = encryptedResources.find(r => decodeBase64(r.title).toLowerCase() === val.toLowerCase());
+    if (currentMatch) {
+      // Flash green
+      inputBar.style.backgroundColor = "#0f0";
+      clearTimeout(flashTimeout);
+      flashTimeout = setTimeout(() => {
+        inputBar.style.backgroundColor = "#111";
+      }, 200);
+    }
+  });
+
+  inputBar.addEventListener("keydown", (e) => {
+    if (currentMatch && e.altKey && e.key === "Enter") {
+      // Launch resource in iframe tab
+      openContent(decodeBase64(currentMatch.url));
+      inputBar.value = "";
+    }
+  });
+}
+
+// -------------------- OPEN RESOURCE --------------------
 function openContent(url) {
   const win = window.open("", "_blank");
   win.document.write(`
@@ -30,12 +78,10 @@ function openContent(url) {
   win.document.close();
 }
 
-// Example: hook into select & release trigger
-// Wait for content.js to unlock
+// -------------------- WAIT FOR UNLOCK --------------------
 let checkUnlock = setInterval(() => {
   if (window.unlocked) {
     clearInterval(checkUnlock);
-    // Open first resource for testing (or call dynamically)
-    openContent(resourcesList[0].url);
+    createInputBar();
   }
 }, 500);
