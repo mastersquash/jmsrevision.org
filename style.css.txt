@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.wrap {
+  width: 90%;
+  margin: 2em auto;
+}
+
+.subject ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.subject li {
+  padding: 0.2em 0;
+}
+
+/* Subtle hint for unlockable items */
+.highlightable {
+  cursor: text;
+  text-decoration: dotted underline; 
+}
+
+.highlightable:hover {
+  color: #555;
+}
